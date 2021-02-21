@@ -1,10 +1,10 @@
 package test;
 
-import nsgl.integer.L2HOrder;
-import nsgl.array.Sorted;
-import nsgl.array.SortedSearch;
-import nsgl.array.sort.Merge;
-import nsgl.order.Order;
+import kompari.integer.L2HOrder;
+import speco.array.SortedSearch;
+import kompari.Order;
+import speco.array.Sorted;
+import speco.array.sort.Merge;
 
 public class Test {
     public static void merge( String[] args ) {
