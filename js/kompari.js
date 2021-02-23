@@ -14,6 +14,12 @@ function l2h(one,two){ return (one-two) }
  */
 function h2l(one,two){ return (two-one) }
 
+Compare = {
+    equals(one, two){
+        if(one.equals !== undefined) return one.equals(two)
+        else return one==two
+    }    
+}
 
 /**
  * <p>Searching algorithm for sorted arrays of objects</p>
