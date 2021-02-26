@@ -1,4 +1,18 @@
 /**
+*
+* kompari.js
+* <P>Java Script for objects comparisson and ordering.</P>
+*
+* Copyright (c) 2021 by Jonatan Gomez-Perdomo. <br>
+* All rights reserved. See <A HREF="https://github.com/jgomezpe/lifya">License</A>. <br>
+*
+* @author <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Professor Jonatan Gomez-Perdomo </A>
+* (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
+* @version 1.0
+*/
+
+/////// Kompari.js ////////////
+/**
  * Determines if the first number is less than (in some order) the second number(one<two)
  * @param one First number
  * @param two Second number
@@ -75,7 +89,7 @@ class SortedSearch {
             if (this.order(x, this.sorted[a]) < 0)  return start
             if (this.order(x, this.sorted[b]) >= 0) return end
             while (a + 1 < b) {
-                var m = (a + b) / 2
+                var m = Math.floor((a + b) / 2)
                 if (this.order(x, this.sorted[m]) < 0) b = m
                 else a = m
             }
@@ -98,7 +112,7 @@ class SortedSearch {
             if (this.order(x, this.sorted[a]) <= 0)  return start-1
             if (this.order(x, this.sorted[b]) > 0) return b
             while (a + 1 < b) {
-                var m = (a + b) / 2
+                var m = Math.floor((a + b) / 2)
                 if (this.order(x, this.sorted[m]) <= 0) b = m
                 else a = m
             }
