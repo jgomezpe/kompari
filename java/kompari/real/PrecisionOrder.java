@@ -19,7 +19,7 @@ public class PrecisionOrder implements DoubleOrder{
     /**
      * Determines if the given double value is zero (according to the precision) or not
      * @param x double value to be analized
-     * @return <i>true</i> if <i>abs(x) <= precision</i>, <i>false</i> otherwise
+     * @return <i>true</i> if <i>abs(x) &lt;= precision</i>, <i>false</i> otherwise
      */
     public static boolean isZero(double x) {
         return (Math.abs(x) <= PRECISION);
@@ -30,7 +30,7 @@ public class PrecisionOrder implements DoubleOrder{
      * defined in DoubleUtil class
      * @param one First Double
      * @param two Second Double
-     * @return (one<two)
+     * @return (one&lt;two)
      */
     public int compare(Double one, Double two){
 	return (Math.abs(one - two) <= PRECISION)?0:one.compareTo(two); 

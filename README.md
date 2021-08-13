@@ -1,5 +1,5 @@
 # kompari
-Java/Javascript comparisson/order methods for the numtseng infrastructure.
+Java/Javascript comparison/order methods for the numtseng infrastructure. Java version requires kerno.jar and speco.jar available at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 <h3>Version 1.0</h3>
 <h3>Copyright (c)</h3>
 &nbsp;Author: <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Jonatan Gomez-Perdomo </A>

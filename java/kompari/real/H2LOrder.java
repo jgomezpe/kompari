@@ -14,7 +14,7 @@ public class H2LOrder implements DoubleOrder {
      * Determines if the first Double is greater than the second Double (one>two)
      * @param one First Double
      * @param two Second Double
-     * @return (one>two)
+     * @return (one&gt;two)
      */
     public int compare(Double one, Double two){ return two.compareTo(one); }
 }

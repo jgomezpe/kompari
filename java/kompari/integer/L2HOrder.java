@@ -14,7 +14,7 @@ public class L2HOrder implements IntOrder{
      * Determines if the first Double is less than (in some order) the second Double (one<two)
      * @param one First Double
      * @param two Second Double
-     * @return (one<two)
+     * @return (one&lt;two)
      */
     public int compare(Integer one, Integer two){ return (one-two); }
 }

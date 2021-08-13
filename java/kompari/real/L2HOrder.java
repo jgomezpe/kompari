@@ -14,7 +14,7 @@ public class L2HOrder implements DoubleOrder {
      * Determines if the first Double is less than (in some order) the second Double (one<two)
      * @param one First Double
      * @param two Second Double
-     * @return (one<two)
+     * @return (one&lt;two)
      */
     public int compare(Double one, Double two){ return one.compareTo(two); }
 }
