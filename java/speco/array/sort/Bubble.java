@@ -1,6 +1,5 @@
 package speco.array.sort;
 
-import speco.array.Array;
 import kompari.Order;
 import speco.array.Sort;
 
@@ -12,13 +11,13 @@ import speco.array.Sort;
  * @author Jonatan Gomez Perdomo
  * @version 1.0
  */
-public class Bubble extends Sort {
+public class Bubble<T> extends Sort<T> {
 
     /**
      * Creates a sorting algorithm with the given order
      * @param order Order used for sorting the objects
      */
-    public Bubble(Order order) { super(order); }
+    public Bubble(Order<T> order) { super(order); }
 
     /**
      * Crates a sorting algorithm with the given order
@@ -26,7 +25,7 @@ public class Bubble extends Sort {
      * @param start Initial position in the array to be sorted
      * @param end Final position in the array to be sorted
      */
-    public Bubble(Order order, int start, int end){ super(order, start, end ); }
+    public Bubble(Order<T> order, int start, int end){ super(order, start, end ); }
 
     /**
      * Sorts a portion of the array of objects according to the given order (it does not creates a new array)
@@ -35,11 +34,13 @@ public class Bubble extends Sort {
      * @param end Final position in the array to be sorted
      */
     @Override
-    public void apply(Object a, int start, int end, Order order) {
+    public void apply(Object a, int start, int end, Order<T> order) {
 	for(int i = start; i < end - 1; i++){
-	    Object x = java.lang.reflect.Array.get(a, i);
+	    @SuppressWarnings("unchecked")
+	    T x = (T)java.lang.reflect.Array.get(a, i);
 	    for(int j = i + 1; j < end; j++) {
-		Object y = java.lang.reflect.Array.get(a, j);
+		@SuppressWarnings("unchecked")
+		T y = (T)java.lang.reflect.Array.get(a, j);
 		if(order.compare(y, x)<0) {
 		    java.lang.reflect.Array.set(a, i, y);
 		    java.lang.reflect.Array.set(a, j, x);
@@ -47,10 +48,5 @@ public class Bubble extends Sort {
 		}
 	    }	
 	}	
-    }
-
-    @Override
-    public <T> void apply(Array<T> a, int start, int end, Order order) {
-	apply(buffer(a),start,end,order);
     }
 }

@@ -10,21 +10,22 @@ import kompari.Order;
  * @author Jonatan Gomez Perdomo
  * @version 1.0
  */
-public class SortedSearch {
-    protected Order order;
-    protected Array<?> sorted;
+public class SortedSearch<T> {
+    protected Order<T> order;
+    protected Array<T> sorted;
+	
+    /**
+     * Creates a search operation for the given sorted array
+     * @param order Order used for locating the object
+     */
+    public SortedSearch(Order<T> order){ this.order = order; }
 	
     /**
      * Creates a search operation for the given sorted array
      * @param sorted Array of elements (should be sorted)
+     * @param order Order used for locating the object
      */
-    public SortedSearch(Order order){ this.order = order; }
-	
-    /**
-     * Creates a search operation for the given sorted array
-     * @param sorted Array of elements (should be sorted)
-     */
-    public SortedSearch(Array<?> sorted, Order order){ 
+    public SortedSearch(Array<T> sorted, Order<T> order){ 
 	this(order);
 	set(sorted);
     }
@@ -34,14 +35,22 @@ public class SortedSearch {
      * @param sorted Array of elements (should be sorted)
      * @param order Order used for locating the object
      */
-    public SortedSearch(Object sorted, Order order){
+    public SortedSearch(Object sorted, Order<T> order){
 	this(order);
 	set(sorted);
     }
 	
-    public void set( Object sorted ){ this.sorted = new Array<Object>(sorted); } 
+    /**
+     * Sets the sorted array to be analyzed 
+     * @param sorted Array to be analyzed
+     */
+    public void set( Object sorted ){ this.sorted = new Array<T>(sorted); } 
 
-    public void set( Array<?> sorted ){ 
+    /**
+     * Sets the sorted array to be analyzed 
+     * @param sorted Array to be analyzed
+     */
+    public void set( Array<T> sorted ){ 
 	this.sorted = sorted;
     } 
 
@@ -50,14 +59,16 @@ public class SortedSearch {
      * @param x Element to be located
      * @return The position of the given object, -1 if the given object is not in the array
      */
-    public int find(Object x) { return find( 0, sorted.size(), x ); }
+    public int find(T x) { return find( 0, sorted.size(), x ); }
 
     /**
      * Searches for the position of the given element. The vector should be sorted
      * @param x Element to be located
+     * @param start Starting searching position
+     * @param end Ending (not included) searching position
      * @return The position of the given object, -1 if the given object is not in the array
      */
-    public int find(int start, int end, Object x) {
+    public int find(int start, int end, T x) {
         int pos = findRight(start, end, x);
         if (pos > start && order.compare(x, sorted.get(pos - 1)) == 0) pos--;
         else pos = -1;
@@ -67,16 +78,18 @@ public class SortedSearch {
     /**
      * Determines if the sorted array contains the given element (according to the associated order)
      * @param x Element to be located
+     * @param start Starting searching position
+     * @param end Ending (not included) searching position
      * @return <i>true</i> if the element belongs to the sorted array, <i>false</i> otherwise
      */
-    public boolean contains(int start, int end, Object x){ return (find(start, end, x) != -1); }
+    public boolean contains(int start, int end, T x){ return (find(start, end, x) != -1); }
 
     /**
      * Determines if the sorted array contains the given element (according to the associated order)
      * @param x Element to be located
      * @return <i>true</i> if the element belongs to the sorted array, <i>false</i> otherwise
      */
-    public boolean contains(Object x) { return (find(x) != -1); }
+    public boolean contains(T x) { return (find(x) != -1); }
 
     /**
      * Searches for the position of the first element in the array that is bigger
@@ -84,15 +97,17 @@ public class SortedSearch {
      * @param x Element to be located
      * @return Position of the object that is bigger than the given element
      */
-    public int findRight(Object x) { return findRight( 0, sorted.size(), x ); }
+    public int findRight(T x) { return findRight( 0, sorted.size(), x ); }
 
     /**
      * Searches for the position of the first element in the array that is bigger
      * than the element given. The array should be sorted
      * @param x Element to be located
+     * @param start Starting searching position
+     * @param end Ending (not included) searching position
      * @return Position of the object that is bigger than the given element
      */
-    public int findRight(int start, int end, Object x){ 
+    public int findRight(int start, int end, T x){ 
         if (end > start) {
             int a = start;
             int b = end - 1;
@@ -113,17 +128,19 @@ public class SortedSearch {
      * @param x Element to be located
      * @return Position of the object that is smaller than the given element
      */
-    public int findLeft(Object x){
+    public int findLeft(T x){
     	return findLeft( 0, sorted.size(), x ); 
     }
 
     /**
      * Searches for the position of the last element in the array that is smaller
      * than the element given. The array should be sorted
+     * @param start Starting searching position
+     * @param end Ending (not included) searching position
      * @param x Element to be located
      * @return Position of the object that is smaller than the given element
      */
-    public int findLeft(int start, int end, Object x) {
+    public int findLeft(int start, int end, T x) {
         if (end > start) {
             int a = start;
             int b = end - 1;

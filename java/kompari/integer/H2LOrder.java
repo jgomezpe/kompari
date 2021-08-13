@@ -9,12 +9,12 @@ package kompari.integer;
  * @version 1.0
  */
 
-public class H2LOrder implements Order {
+public class H2LOrder implements IntOrder {
     /**
-     * Determines if the first Double is less than (in some order) the second Double (one<two)
-     * @param one First Double
-     * @param two Second Double
-     * @return (one<two)
+     * Determines if the first Integer is greater than the second Integer (one>two)
+     * @param one First Integer
+     * @param two Second Integer
+     * @return (one>two)
      */
-    public int compare(int one, int two){ return (two-one); }
+    public int compare(Integer one, Integer two){ return (two-one); }
 }

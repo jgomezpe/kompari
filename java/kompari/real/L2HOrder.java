@@ -9,21 +9,12 @@ package kompari.real;
  * @version 1.0
  */
 
-public class L2HOrder implements Order {
+public class L2HOrder implements DoubleOrder {
 	   /**
-     * Determines if the first Integer is less than (in some order) the second Integer (one<two)
-     * @param one First Integer
-     * @param two Second Integer
+     * Determines if the first Double is less than (in some order) the second Double (one<two)
+     * @param one First Double
+     * @param two Second Double
      * @return (one<two)
      */
     public int compare(Double one, Double two){ return one.compareTo(two); }
-
-    /**
-     * Determines if the first Integer is less than (in some order) the second Integer (one<two)
-     * @param one First Integer
-     * @param two Second Integer
-     * @return (one<two)
-     */
-	@Override
-    public int compare(Object one, Object two){ return compare((Double)one,(Double)two); }
 }

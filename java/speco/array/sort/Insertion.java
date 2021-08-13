@@ -1,6 +1,5 @@
 package speco.array.sort;
 
-import speco.array.Array;
 import kompari.Order;
 import speco.array.Sort;
 
@@ -12,12 +11,12 @@ import speco.array.Sort;
  * @author Jonatan Gomez Perdomo
  * @version 1.0
  */
-public class Insertion extends Sort{
+public class Insertion<T> extends Sort<T>{
     /**
      * Crates a sorting algorithm with the given order
      * @param order Order used for sorting the objects
      */
-    public Insertion(Order order) { super(order); }
+    public Insertion(Order<T> order) { super(order); }
 
     /**
      * Crates a sorting algorithm with the given order
@@ -25,18 +24,19 @@ public class Insertion extends Sort{
      * @param start Initial position in the array to be sorted
      * @param end Final position in the array to be sorted
      */
-    public Insertion(Order order, int start, int end){ super(order, start, end ); }
+    public Insertion(Order<T> order, int start, int end){ super(order, start, end ); }
 
     /**
      * Sorts a vector of objects using Insertion sort
      * @param a array to be sorted
      */
-    public void apply(Object a, int start, int end, Order order) {
+    @SuppressWarnings("unchecked")
+    public void apply(Object a, int start, int end, Order<T> order) {
 	for (int i = start+1; i < end; i++) {
-	    Object y;
-	    Object x = java.lang.reflect.Array.get(a, i);
+	    T y;
+	    T x = (T)java.lang.reflect.Array.get(a, i);
 	    int j = i - 1;
-	    while(j >= start && order.compare(x, y=java.lang.reflect.Array.get(a, j))<0) {
+	    while(j >= start && order.compare(x, y=(T)java.lang.reflect.Array.get(a, j))<0) {
   		java.lang.reflect.Array.set(a, j+1, y);
   		j--;
 	    }
@@ -44,11 +44,4 @@ public class Insertion extends Sort{
 	}
     }
  
-    /**
-     * Sorts a vector of objects using Insertion sort
-     * @param a array to be sorted
-     */
-    public <T> void apply(Array<T> a, int start, int end, Order order) {
-	apply(buffer(a),start,end,order);
-    }
 }

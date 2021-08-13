@@ -10,7 +10,7 @@ package kompari.real;
  * @version 1.0
  */
 
-public class PrecisionOrder implements Order{
+public class PrecisionOrder implements DoubleOrder{
     /**
      * Precision for considering two double values equivalents
      */
@@ -32,22 +32,7 @@ public class PrecisionOrder implements Order{
      * @param two Second Double
      * @return (one<two)
      */
-    @Override
-    public int compare(double one, double two){ 
-	return (Math.abs(one - two) <= PRECISION)?0:((Double)one).compareTo((Double)two); 
-    }
-
-    /**
-     * Determines if the first Double is less than (in some order) the second Double (one<two) considering the precision
-     * defined in DoubleUtil class
-     * @param one First Double
-     * @param two Second Double
-     * @return (one<two)
-     */
     public int compare(Double one, Double two){
 	return (Math.abs(one - two) <= PRECISION)?0:one.compareTo(two); 
     }
-
-    @Override
-    public int compare(Object one, Object two) { return compare((Double)one,(Double)two); }
 }

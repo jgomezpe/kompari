@@ -1,6 +1,5 @@
 package speco.array.sort;
 
-import speco.array.Array;
 import kompari.Order;
 import speco.array.Sort;
 
@@ -12,16 +11,16 @@ import speco.array.Sort;
  * @author Jonatan Gomez Perdomo
  * @version 1.0
  */
-public class Merge extends Sort {
+public class Merge<T> extends Sort<T> {
     /**
      * InsertionSort for sorting an array of less than 8 elements
      */
-    protected Insertion insertion;
+    protected Insertion<T> insertion;
     /**
      * Crates a sorting algorithm with the given order
      * @param order Order used for sorting the objects
      */
-    public Merge(Order order) { super(order); }
+    public Merge(Order<T> order) { super(order); }
 
     /**
      * Crates a sorting algorithm with the given order
@@ -29,7 +28,7 @@ public class Merge extends Sort {
      * @param start Initial position in the array to be sorted
      * @param end Final position in the array to be sorted
      */
-    public Merge(Order order, int start, int end){ super(order, start, end ); }
+    public Merge(Order<T> order, int start, int end){ super(order, start, end ); }
     
     protected int type;
     
@@ -52,10 +51,11 @@ public class Merge extends Sort {
      * @param end Final position in the array to be sorted
      * @return <i>true</i> If the sorting process was done without fails, <i>false</i> otherwise
      */
-    public void apply(Object a, int start, int end, Order order) {
-	insertion = new Insertion(order);
+    @SuppressWarnings("unchecked")
+    public void apply(Object a, int start, int end, Order<T> order) {
+	insertion = new Insertion<T>(order);
 	int i=start;
-	while( i<end-1 && order.compare(java.lang.reflect.Array.get(a, i), java.lang.reflect.Array.get(a, i+1)) <= 0 ){ i++; }
+	while( i<end-1 && order.compare((T)java.lang.reflect.Array.get(a, i), (T)java.lang.reflect.Array.get(a, i+1)) <= 0 ){ i++; }
         if( i<end-1 ){
             int n = end - start;
             Object ca = copy(a, start, n);
@@ -63,32 +63,12 @@ public class Merge extends Sort {
             System.arraycopy(ca,0,a,start,n);
         }
     }
-
-    /**
-     * Sorts a portion of the array of objects according to the given order (it does not creates a new array)
-     * @param a Array of objects to be sorted
-     * @param start Initial position in the array to be sorted
-     * @param end Final position in the array to be sorted
-     * @return <i>true</i> If the sorting process was done without fails, <i>false</i> otherwise
-     */
-    public <T> void apply(Array<T> a, int start, int end, Order order) {
-	insertion = new Insertion(order);
-	int i=start;
-	while( i<end-1 && order.compare(a.get(i), a.get(i+1)) <= 0 ){ i++; }
-        if( i<end-1 ){
-            int n = end - start;
-            @SuppressWarnings("unchecked")
-	    T[] ca = (T[])new Object[n];
-            for( i=0; i<n; i++ ) ca[i] = a.get(start+i);
-            this.rec_apply( ca );
-            for( i=0; i<n; i++ ) a.set(start+i, ca[i]);
-        }
-    }
     
     /**
      * Recursive merge sort method
      * @param a Array to be sorted
      */
+    @SuppressWarnings("unchecked")
     public void rec_apply(Object a) {
         int n = java.lang.reflect.Array.getLength(a);
         if (n > 7) {
@@ -102,17 +82,18 @@ public class Merge extends Sort {
             int k = 0;
             int left = 0;
             int right = 0;
-            Object x = java.lang.reflect.Array.get(aLeft,left);
-            Object y = java.lang.reflect.Array.get(aRight,right);
+          
+	    T x = (T)java.lang.reflect.Array.get(aLeft,left);
+            T y = (T)java.lang.reflect.Array.get(aRight,right);
             while (left < nLeft && right < nRight) {
                 if(order.compare(x, y) < 0) {
                     java.lang.reflect.Array.set(a,k,x);
                     left++;
-                    if( left<nLeft ) x = java.lang.reflect.Array.get(aLeft,left);
+                    if( left<nLeft ) x = (T)java.lang.reflect.Array.get(aLeft,left);
                 } else {
                     java.lang.reflect.Array.set(a,k,y);
                     right++;
-                    if( right<nRight ) y = java.lang.reflect.Array.get(aRight,right);
+                    if( right<nRight ) y = (T)java.lang.reflect.Array.get(aRight,right);
                 }
                 k++;
             } 

@@ -44,17 +44,17 @@ package kompari;
  * <p>Description: Reverses an order</p>
  *
  */
-public class Reversed implements Order{
+public class Reversed<T> implements Order<T>{
     /**
      * Order to be reversed
      */
-    protected Order order = null;
+    protected Order<T> order = null;
 
     /**
      * Creates a reversed order for the given order
      * @param order Order to be reversed
      */
-    public Reversed(Order order){ this.order = order; }
+    public Reversed(Order<T> order){ this.order = order; }
 
     /**
      * Determines if object one is less than (in the reversed order) object two
@@ -63,5 +63,5 @@ public class Reversed implements Order{
      * @return (one &lt; two) i.e. two &lt; one in the original_order
      */
     @Override
-    public int compare(Object one, Object two){ return order.compare(two, one); }    
+    public int compare(T one, T two){ return order.compare(two, one); }    
 }

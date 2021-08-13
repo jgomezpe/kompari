@@ -10,11 +10,11 @@ import kompari.Order;
  * @author Jonatan Gomez Perdomo
  * @version 1.0
  */
-public abstract class Sort{
+public abstract class Sort<T>{
     /**
      * Order used for sorting the objects
      */
-    protected Order order = null;
+    protected Order<T> order = null;
 
     /**
      * start Initial position in the array to be sorted
@@ -30,7 +30,7 @@ public abstract class Sort{
      * Crates a sorting algorithm with the given order
      * @param order Order used for sorting the objects
      */
-    public Sort(Order order) { this.order = order; }
+    public Sort(Order<T> order) { this.order = order; }
 
     /**
      * Crates a sorting algorithm with the given order
@@ -38,7 +38,7 @@ public abstract class Sort{
      * @param start Initial position in the array to be sorted
      * @param end Final position in the array to be sorted
      */
-    public Sort(Order order, int start, int end){ 
+    public Sort(Order<T> order, int start, int end){ 
     	this(order); 
     	this.start = start;
     	this.end = end;
@@ -61,7 +61,7 @@ public abstract class Sort{
      * @param end Final position in the array to be sorted
      * @param order Order used for sorting the objects
      */
-    public abstract void apply(Object a, int start, int end, Order order);
+    public abstract void apply(Object a, int start, int end, Order<T> order);
 
     /**
      * Sorts the array of objects according to the given order (it does not creates a new array)
@@ -70,27 +70,19 @@ public abstract class Sort{
      * @param end Final position in the array to be sorted
      * @param order Order used for sorting the objects
      */
-    public abstract <T> void apply(Array<T> a, int start, int end, Order order);
+    public void apply(Array<T> a, int start, int end, Order<T> order){ apply(a.buffer,start,end,order); }
 
     /**
      * Runs the sorting algorithm on the given array and the established order
      * @param input Array to be sorted
-     * @return Sorted array
      */
-    public Object apply(Object input) {
+    public void apply(Object input) {
     	apply(input, start, (end==-1)?java.lang.reflect.Array.getLength(input):end, order);
-    	return input;
     }
 
-    protected Object buffer(Array<?> a) { return a.buffer; }
-	
     /**
      * Runs the sorting algorithm on the given array and the established order
      * @param input Array to be sorted
-     * @return Sorted array
      */
-    public <T> Array<T> apply(Array<T> input){
-	apply(input,0,input.size(), order);
-	return input;
-    }
+    public void apply(Array<T> input){ apply(input.buffer); }
 }

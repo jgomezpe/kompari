@@ -2,9 +2,10 @@
 *
 * kompari.js
 * <P>Java Script for objects comparisson and ordering.</P>
+* <P>A numtseng module <A HREF="https://numtseng.com/modules/kompari.js">https://numtseng.com/modules/kompari.js</A> 
 *
 * Copyright (c) 2021 by Jonatan Gomez-Perdomo. <br>
-* All rights reserved. See <A HREF="https://github.com/jgomezpe/lifya">License</A>. <br>
+* All rights reserved. See <A HREF="https://github.com/jgomezpe/kompari">License</A>. <br>
 *
 * @author <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Professor Jonatan Gomez-Perdomo </A>
 * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
