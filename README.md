@@ -3,7 +3,7 @@ Java/Javascript comparison/order methods for the numtseng infrastructure.
 
 &nbsp;Java version requires: kerno.jar, and speco.jar
 
-&nbsp;Available at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
+&nbsp;Available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
 <h3>Version 1.0</h3>
 <h3>Copyright (c)</h3>
