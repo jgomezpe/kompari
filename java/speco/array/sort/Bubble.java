@@ -42,9 +42,9 @@ import kompari.Order;
 import speco.array.Sort;
 
 /**
- * <p>Title: BubbleSort</p>
+ * <p>Title: Bubble</p>
  *
- * <p>Description: BubbleSort algorithm</p>
+ * <p>Description: Bubble sort algorithm</p>
  * @param <T> Type of elements in the array
  */
 public class Bubble<T> extends Sort<T> {

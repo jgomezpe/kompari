@@ -42,9 +42,9 @@ import kompari.Order;
 import speco.array.Sort;
 
 /**
- * <p>Title: InsertioSort</p>
+ * <p>Title: Insertion</p>
  *
- * <p>Description: InsertionSort algorithm</p>
+ * <p>Description: Insertion sort algorithm</p>
  * @param <T> Type of elements in the array
  */
 public class Insertion<T> extends Sort<T>{
