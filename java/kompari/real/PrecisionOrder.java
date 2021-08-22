@@ -44,7 +44,7 @@ package kompari.real;
  * <p>Description: Doubles considering the double precision defined in DoubleUtil class</p>
  *
  */
-public class PrecisionOrder implements DoubleOrder{
+public class PrecisionOrder implements RealOrder{
 	/**
 	 * Precision for considering two double values equivalents
 	 */

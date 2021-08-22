@@ -44,7 +44,7 @@ package kompari.real;
  * <p>Description: Compares two Doubles using low to high order</p>
  *
  */
-public class L2HOrder implements DoubleOrder {
+public class L2HOrder implements RealOrder {
 	/**
 	 * Determines if the first Double is lower than the second Double (one&lt;two)
 	 * @param one First Integer

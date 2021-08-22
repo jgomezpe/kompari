@@ -41,12 +41,12 @@ package kompari.real;
 import kompari.Order;
 
 /**
- * <p>Title: DoubleOrder</p>
+ * <p>Title: RealOrder</p>
  *
  * <p>Description: Compares two Doubles</p>
  *
  */
-public interface DoubleOrder extends Order<Double>{
+public interface RealOrder extends Order<Double>{
 	/**
 	 * Determines if the first double is less than (in some order) the second double (one&lt;two)
 	 * @param one First double
