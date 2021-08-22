@@ -48,108 +48,110 @@ import kompari.Order;
  *
  */
 public class SortedArrayMultiSet<T> extends ArrayMultiSet<T>{
-    /**
-     * Binary search algorithm
-     */
-    protected SortedSearch<T> search;
-    /**
-     * Order function
-     */
-    protected Order<T> order;
+	/**
+	 * Binary search algorithm
+	 */
+	protected SortedSearch<T> search;
+ 
+	/**
+	 * Order function
+	 */
+	protected Order<T> order;
 
-    /**
-     * Creates a set using the Array for maintaining the elements
-     * @param order Order function
-     */
-    public SortedArrayMultiSet( Order<T> order ) { 
-	super();
-	this.order = order;
-	this.search = new SortedSearch<T>(array, order);
-    }
-
-    /**
-     * Creates a set using the Array for maintaining the elements
-     * @param array Array maintaining the elements
-     * @param order Order function
-     */
-    public SortedArrayMultiSet( Array<T> array, Order<T> order ) { 
-	super(array);
-	this.order = order;
-	this.search = new SortedSearch<T>(array, order);
-    }
-
-    /**
-     * Gets the associated index (key) of the first appearance (in some order) of the given object.
-     * @param data Object from which an associated index will be returned.
-     * @return The associated index of the first appearance of the object, <i>null</i> otherwise.
-     */
-    @Override
-    public Integer first(T data) {
-	int i=search.findLeft(data);
-	if(i<array.size() && order.compare(data, array.get(i+1))==0) return i+1;
-	return null;
-    }
-
-    /**
-     * Gets the associated index (key) of the first appearance (in some order) of the given object.
-     * @param data Object from which an associated index will be returned.
-     * @return The associated index of the first appearance of the object, <i>null</i> otherwise.
-     */
-    @Override
-    public Integer last(T data) {
-	int i=search.findRight(data);
-	if(i>0 && order.compare(data, array.get(i-1))==0) return i-1;
-	return null;
-    }
-    /**
-     * Gets an iterable version of the collection of indices associated to a given object
-     * @param data Object from which associated indices will be returned.
-     * @return An iterable version of the collection of indices associated to a given object
-     */
-    @Override
-    public Iterator<Integer> get(T data) {
-	return new Iterator<Integer>() {
-	    protected int min=search.findLeft(data)+1;
-	    protected int max=search.findRight(data)-1;
-	    @Override
-	    public boolean hasNext() { return min<=max; }
-
-	    @Override
-	    public Integer next() {
-		if(min<=max) return min++;
-		return null;
-	    } 
-	};
-    }
-
-    /**
-     * Adds a data element to the set
-     * @param data Data element to be inserted
-     * @return <i>true</i> if the element could be added, <i>false</i> otherwise
-     */
-    @Override
-    public boolean add(T data) { 
-        int index = search.findRight(data);
-        if( index == array.size() ) return array.add(data);
-        else return array.add(index, data);
-    }
-    
-    /**
-     * Removes completely (all copies) the given data from the associated collection 
-     * @param data Object to be removed from the associated collection
-     * @return <i>true</i> if the element was in the multiset and could be (completely) removed, <i>false</i> otherwise
-     */
-    @Override
-    public boolean remove(T data) {	
-	int min=search.findLeft(data)+1;
-	int max=search.findRight(data)-1;
-	if(min<=max) {
-	    while(min<=max) {
-		array.remove(max);
-		max--;
-	    }
-	    return true;
+	/**
+	 * Creates a set using the Array for maintaining the elements
+	 * @param order Order function
+	 */
+	public SortedArrayMultiSet( Order<T> order ) { 
+		super();
+		this.order = order;
+		this.search = new SortedSearch<T>(array, order);
 	}
-	return false;
-    }    
+
+	/**
+	 * Creates a set using the Array for maintaining the elements
+	 * @param array Array maintaining the elements
+	 * @param order Order function
+	 */
+	public SortedArrayMultiSet( Array<T> array, Order<T> order ) { 
+		super(array);
+		this.order = order;
+		this.search = new SortedSearch<T>(array, order);
+	}
+
+	/**
+	 * Gets the associated index (key) of the first appearance (in some order) of the given object.
+	 * @param data Object from which an associated index will be returned.
+	 * @return The associated index of the first appearance of the object, <i>null</i> otherwise.
+	 */
+	@Override
+	public Integer first(T data) {
+		int i=search.findLeft(data);
+		if(i<array.size() && order.compare(data, array.get(i+1))==0) return i+1;
+		return null;
+	}
+
+	/**
+	 * Gets the associated index (key) of the first appearance (in some order) of the given object.
+	 * @param data Object from which an associated index will be returned.
+	 * @return The associated index of the first appearance of the object, <i>null</i> otherwise.
+	 */
+	@Override
+	public Integer last(T data) {
+		int i=search.findRight(data);
+		if(i>0 && order.compare(data, array.get(i-1))==0) return i-1;
+		return null;
+	}
+	
+	/**
+	 * Gets an iterable version of the collection of indices associated to a given object
+	 * @param data Object from which associated indices will be returned.
+	 * @return An iterable version of the collection of indices associated to a given object
+	 */
+	@Override
+	public Iterator<Integer> get(T data) {
+		return new Iterator<Integer>() {
+			protected int min=search.findLeft(data)+1;
+			protected int max=search.findRight(data)-1;
+			@Override
+			public boolean hasNext() { return min<=max; }
+
+			@Override
+			public Integer next() {
+				if(min<=max) return min++;
+				return null;
+			} 
+		};
+	}
+
+	/**
+	 * Adds a data element to the set
+	 * @param data Data element to be inserted
+	 * @return <i>true</i> if the element could be added, <i>false</i> otherwise
+	 */
+	@Override
+	public boolean add(T data) { 
+		int index = search.findRight(data);
+		if( index == array.size() ) return array.add(data);
+		else return array.add(index, data);
+	}
+    
+	/**
+	 * Removes completely (all copies) the given data from the associated collection 
+	 * @param data Object to be removed from the associated collection
+	 * @return <i>true</i> if the element was in the multiset and could be (completely) removed, <i>false</i> otherwise
+	 */
+	@Override
+	public boolean remove(T data) {	
+		int min=search.findLeft(data)+1;
+		int max=search.findRight(data)-1;
+		if(min<=max) {
+			while(min<=max) {
+				array.remove(max);
+				max--;
+			}
+			return true;
+		}
+		return false;
+	}    
 }

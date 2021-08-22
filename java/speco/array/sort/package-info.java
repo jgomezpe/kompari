@@ -1,5 +1,5 @@
 /**
- * <p>Array sorting methods.</p>
+ * <p>Array sorting: Definitions and methods.</p>
  *
  * <p>Copyright: Copyright (c) 2019</p>
  *
@@ -37,4 +37,5 @@
  * @author <A HREF="http://disi.unal.edu.co/profesores/jgomezpe"> Jonatan Gomez-Perdomo </A>
  * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
  * @version 1.0
- */package speco.array.sort;
+ */
+package speco.array.sort;

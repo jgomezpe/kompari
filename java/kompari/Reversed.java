@@ -42,26 +42,27 @@ package kompari;
  * <p>Title: ReversedOrder</p>
  *
  * <p>Description: Reverses an order</p>
+ * @param <T> Type of elements to order (reversed)
  *
  */
 public class Reversed<T> implements Order<T>{
-    /**
-     * Order to be reversed
-     */
-    protected Order<T> order = null;
+	/**
+	 * Order to be reversed
+	 */
+	protected Order<T> order = null;
 
-    /**
-     * Creates a reversed order for the given order
-     * @param order Order to be reversed
-     */
-    public Reversed(Order<T> order){ this.order = order; }
+	/**
+	 * Creates a reversed order for the given order
+	 * @param order Order to be reversed
+	 */
+	public Reversed(Order<T> order){ this.order = order; }
 
-    /**
-     * Determines if object one is less than (in the reversed order) object two
-     * @param one The first object to compare
-     * @param two The second object to compare
-     * @return (one &lt; two) i.e. two &lt; one in the original_order
-     */
-    @Override
-    public int compare(T one, T two){ return order.compare(two, one); }    
+	/**
+	 * Determines if object one is less than (in the reversed order) object two
+	 * @param one The first object to compare
+	 * @param two The second object to compare
+	 * @return (one &lt; two) i.e. two &lt; one in the original_order
+	 */
+	@Override
+	public int compare(T one, T two){ return order.compare(two, one); }    
 }

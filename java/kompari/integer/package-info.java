@@ -1,5 +1,5 @@
 /**
- * <p>Integer numbers primitive data type: Definitions and methods.</p>
+ * <p>Integer numbers comparison: Definitions and methods.</p>
  *
  * <p>Copyright: Copyright (c) 2019</p>
  *
