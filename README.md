@@ -16,7 +16,7 @@ Java/Javascript comparison/order methods for the numtseng infrastructure.
 
 &nbsp;Java/Javascript source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
 
-&nbsp;Java API documentation: <A HREF="https://numtseng.com/api/kompari/java/">https://numtseng.com/api/kompari/java/</A>
+&nbsp;Java API documentation: <A HREF="https://numtseng.com/api/java/kompari/">https://numtseng.com/api/java/kompari/</A>
 
 &nbsp;Javascript API documentation: <A HREF="https://numtseng.com/api/kompari/">https://numtseng.com/api/kompari/</A>
 
