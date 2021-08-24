@@ -38,14 +38,17 @@
  */
 package test;
 
-import kompari.integer.L2HOrder;
+import kompari.integer.IntL2HOrder;
 import speco.array.SortedSearch;
 import kompari.Order;
 import speco.array.sort.Merge;
 
+/**
+ * <p>Testing sort algorithms</p>
+ */
 public class Test {
 	public static void merge( String[] args ) {
-		Order<Integer> order = new L2HOrder();
+		Order<Integer> order = new IntL2HOrder();
 		Merge<Integer> sort = new Merge<Integer>(order);
 		int[] x = new int[] {3,1,5,9,7,13,11,15,4,2,8,6,0,12,10,16,14,18};
 		sort.apply(x, 0, x.length, order);
@@ -54,7 +57,7 @@ public class Test {
 	} 
     
 	public static void search() {
-		Order<Integer> order = new L2HOrder();
+		Order<Integer> order = new IntL2HOrder();
 		Merge<Integer> sort = new Merge<Integer>(order);
 		int[] x = new int[] {3,1,5,9,7,13,11,15,4,2,8,6,0,12,10,16,14,18};
 		sort.apply(x, 0, x.length, order);

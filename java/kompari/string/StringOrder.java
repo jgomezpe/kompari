@@ -41,9 +41,7 @@ package kompari.string;
 import kompari.Order;
 
 /**
- * <p>Title: StringOrder</p>
- *
- * <p>Description: Lexicographical String order</p>
+ * <p>Lexicographical String order</p>
  *
  */
 public class StringOrder implements Order<String> {

@@ -39,9 +39,7 @@
 package kompari;
 
 /**
- * <p>Title: ReversedOrder</p>
- *
- * <p>Description: Reverses an order</p>
+ * <p>Reverses an order</p>
  * @param <T> Type of elements to order (reversed)
  *
  */

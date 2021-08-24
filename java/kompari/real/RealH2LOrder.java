@@ -39,12 +39,10 @@
 package kompari.real;
 
 /**
- * <p>Title: H2LOrder</p>
- *
- * <p>Description: Compares two Doubles using high to low order</p>
+ * <p>Compares two Doubles using high to low order</p>
  *
  */
-public class H2LOrder implements RealOrder {
+public class RealH2LOrder implements RealOrder {
 	/**
 	 * Determines if the first Double is greater than the second Double (one&gt;two)
 	 * @param one First Double

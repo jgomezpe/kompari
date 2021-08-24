@@ -41,9 +41,7 @@ package speco.array;
 import kompari.Order;
 
 /**
- * <p>Title: SortedSearch</p>
- *
- * <p>Description: Searching algorithm for sorted arrays of objects</p>
+ * <p>Searching algorithm for sorted arrays of objects</p>
  * @param <T> Type of elements in the array
  */
 public class SortedSearch<T> {

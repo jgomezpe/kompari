@@ -41,9 +41,7 @@ package kompari.real;
 import kompari.Order;
 
 /**
- * <p>Title: RealOrder</p>
- *
- * <p>Description: Compares two Doubles</p>
+ * <p>Compares two Doubles</p>
  *
  */
 public interface RealOrder extends Order<Double>{

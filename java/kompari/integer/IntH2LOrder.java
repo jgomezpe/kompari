@@ -39,17 +39,15 @@
 package kompari.integer;
 
 /**
- * <p>Title: L2HOrder</p>
- *
- * <p>Description: Compares two Integers using low to high order</p>
+ * <p>Compares two Integers using high to low order</p>
  *
  */
-public class L2HOrder implements IntOrder{
+public class IntH2LOrder implements IntOrder {
 	/**
-	 * Determines if the first Integer is lower than the second Integer (one&lt;two)
+	 * Determines if the first Integer is greater than the second Integer (one&gt;two)
 	 * @param one First Integer
 	 * @param two Second Integer
-	 * @return (one&lt;two)
+	 * @return (one&gt;two)
 	 */
-	public int compare(Integer one, Integer two){ return (one-two); }
+	public int compare(Integer one, Integer two){ return (two-one); }
 }

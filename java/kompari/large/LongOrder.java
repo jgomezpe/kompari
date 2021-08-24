@@ -41,9 +41,7 @@ package kompari.large;
 import kompari.Order;
 
 /**
- * <p>Title: LongOrder</p>
- *
- * <p>Description: Compares two Longs</p>
+ * <p>Compares two Longs</p>
  *
  */
 public interface LongOrder extends Order<Long> {

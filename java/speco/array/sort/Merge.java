@@ -42,9 +42,7 @@ import kompari.Order;
 import speco.array.Sort;
 
 /**
- * <p>Title: Merge</p>
- *
- * <p>Description: Merge Sort algorithm</p>
+ * <p>Merge Sort algorithm</p>
  * @param <T> Type of elements in the array
  */
 public class Merge<T> extends Sort<T> {

@@ -36,21 +36,18 @@
  * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
  * @version 1.0
  */
-package kompari.large;
+package kompari.real;
 
 /**
- * <p>Title: L2HOrder</p>
- *
- * <p>Description: Compares two Longs using low to high order</p>
+ * <p>Compares two Doubles using low to high order</p>
  *
  */
-public class L2HOrder implements LongOrder {
+public class RealL2HOrder implements RealOrder {
 	/**
-	 * Determines if the first Long is lower than the second Long (one&lt;two)
-	 * @param one First Long
-	 * @param two Second Long
+	 * Determines if the first Double is lower than the second Double (one&lt;two)
+	 * @param one First Integer
+	 * @param two Second Integer
 	 * @return (one&lt;two)
 	 */
-    public int compare(Long one, Long two){ return one.compareTo(two); }
-
+	public int compare(Double one, Double two){ return one.compareTo(two); }
 }

@@ -42,9 +42,7 @@ import java.util.Iterator;
 import kompari.Order;
 
 /**
- * <p>Title: SortedArrayMultiSet</p>
- *
- * <p>Description: A set allowing multiple copies of an element. Provide access to elements using an index/key.</p>
+ * <p>A set allowing multiple copies of an element. Provide access to elements using an index/key.</p>
  * @param <T> Type of elements in the array
  *
  */

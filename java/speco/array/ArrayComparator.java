@@ -41,9 +41,7 @@ package speco.array;
 import kompari.Comparator;
 
 /**
- * <p>Title: ArrayComparator</p>
- *
- * <p>Description: Compares two Arrays</p>
+ * <p>Compares two Arrays</p>
  * @param <T> Type of elements in the array
  */
 public class ArrayComparator<T> implements Comparator<Array<T>>{

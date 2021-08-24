@@ -41,9 +41,7 @@ package speco.array;
 import kompari.Order;
 
 /**
- * <p>Title: Sort</p>
- *
- * <p>Description: Abstract Sorting algorithm for Arrays of objects</p>
+ * <p>Abstract Sorting algorithm for Arrays of objects</p>
  * @param <T> Type of elements in the array
  */
 public abstract class Sort<T>{

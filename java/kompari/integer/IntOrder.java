@@ -41,9 +41,7 @@ package kompari.integer;
 import kompari.Order;
 
 /**
- * <p>Title: IntOrder</p>
- *
- * <p>Description: Compares two Integers</p>
+ * <p>Compares two Integers</p>
  *
  */
 public interface IntOrder extends Order<Integer> {

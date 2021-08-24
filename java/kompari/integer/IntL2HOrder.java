@@ -36,20 +36,18 @@
  * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
  * @version 1.0
  */
-package kompari.large;
+package kompari.integer;
 
 /**
- * <p>Title: H2LOrder</p>
- *
- * <p>Description: Compares two Longs using high to low order</p>
+ * <p>Compares two Integers using low to high order</p>
  *
  */
-public class H2LOrder implements LongOrder {
+public class IntL2HOrder implements IntOrder{
 	/**
-	 * Determines if the first Long is greater than the second Long (one&gt;two)
-	 * @param one First Long
-	 * @param two Second Long
-	 * @return (one&gt;two)
+	 * Determines if the first Integer is lower than the second Integer (one&lt;two)
+	 * @param one First Integer
+	 * @param two Second Integer
+	 * @return (one&lt;two)
 	 */
-    public int compare(Long one, Long two){ return two.compareTo(one); }
+	public int compare(Integer one, Integer two){ return (one-two); }
 }
