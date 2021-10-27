@@ -1,6 +1,4 @@
 /**
- * <p>Comparison interfaces, classes and methods (Reversed).</p>
- *
  * <p>Copyright: Copyright (c) 2019</p>
  *
  * <h3>License</h3>
@@ -38,4 +36,39 @@
  * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
  * @version 1.0
  */
-package kompari;
+
+
+import kompari.integer.IntL2HOrder;
+import speco.array.SortedSearch;
+import kompari.Order;
+import speco.array.sort.Merge;
+
+/**
+ * <p>Testing sort algorithms</p>
+ */
+public class KompariDemo {
+	public static void merge( String[] args ) {
+		Order<Integer> order = new IntL2HOrder();
+		Merge<Integer> sort = new Merge<Integer>(order);
+		int[] x = new int[] {3,1,5,9,7,13,11,15,4,2,8,6,0,12,10,16,14,18};
+		sort.apply(x, 0, x.length, order);
+		for( int i=0; i<x.length; i++)
+			System.out.println(x[i]);
+	} 
+    
+	public static void search() {
+		Order<Integer> order = new IntL2HOrder();
+		Merge<Integer> sort = new Merge<Integer>(order);
+		int[] x = new int[] {3,1,5,9,7,13,11,15,4,2,8,6,0,12,10,16,14,18};
+		sort.apply(x, 0, x.length, order);
+		for( int i=0; i<x.length; i++)
+			System.out.println(x[i]);
+		SortedSearch<Integer> search = new SortedSearch<Integer>(x,order); 
+		for( int i=0; i<x.length; i++ )
+			System.out.println(x[i] + ":" + search.find(x[i]));
+	} 
+    
+	public static void main( String[] args ) {
+		search();
+	}
+}
