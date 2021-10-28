@@ -1,26 +1,29 @@
 # kompari
-Java/Javascript comparison/order methods for the numtseng infrastructure.
+Comparison/order methods for the numtseng infrastructure.
 
-&nbsp;Java version requires: speco.jar
-
-&nbsp;Available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
+&nbsp;Source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
 
 <h3>Version 1.0</h3>
 <h3>Copyright (c)</h3>
 &nbsp;Author: <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Jonatan Gomez-Perdomo </A>
+
 &nbsp;E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A>
 
-&nbsp;Java ready to use: <A HREF="https://github.com/jgomezpe/libs/kompari.jar">https://github.com/jgomezpe/libs/kompari.jar</A>
-
-&nbsp;Javascript ready to use: <A HREF="https://numtseng.com/modules/kompari.js">https://numtseng.com/modules/kompari.js</A>
-
-&nbsp;Java/Javascript source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
-
-&nbsp;Java API documentation: <A HREF="https://numtseng.com/api/kompari/java/">https://numtseng.com/api/kompari/java/</A>
-
-&nbsp;Javascript API documentation: <A HREF="https://numtseng.com/api/kompari/js/">https://numtseng.com/api/kompari/js/</A>
-
 &nbsp;All rights reserved.
+
+<h3>Java</h3>
+
+&nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/kompari.jar">https://github.com/jgomezpe/libs/kompari.jar</A>
+
+&nbsp;API documentation: <A HREF="https://numtseng.com/api/kompari/java/">https://numtseng.com/api/kompari/java/</A>
+
+&nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
+
+<h3>JavaScript</h3>
+
+&nbsp;Ready to use: <A HREF="https://numtseng.com/modules/kompari.js">https://numtseng.com/modules/kompari.js</A>
+
+&nbsp;API documentation: <A HREF="https://numtseng.com/api/kompari/js/">https://numtseng.com/api/kompari/js/</A>
 
 <h3>Licence</h3>
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
