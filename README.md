@@ -1,5 +1,5 @@
 # kompari
-Comparison/order methods.
+Comparison/order methods: Merge Sort, Bubble sort, and Insertion sort (as subclasses of the Sort class), a searching elements mechanism over sorted arrays, comparison (low to high, high to low) methods as functions to sort in any of these orders. Written in Java and JavaScript.
 
 &nbsp;Source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
 
