@@ -13,9 +13,9 @@ Comparison/order methods.
 
 <h3>Java</h3>
 
-&nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/kompari.jar">https://github.com/jgomezpe/libs/kompari.jar</A>
+&nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A> kompari.jar
 
-&nbsp;Demo class: <A HREF="https:/github.com/jgomezpe/kompari/demo/java/KompariDemo.java">https:/github.com/jgomezpe/kompari/demo/java/KompariDemo.java</A>
+&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/demo/java/KompariDemo.java">https://jgomezpe.github.io/kompari/demo/java/KompariDemo.java</A>
 
 &nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
