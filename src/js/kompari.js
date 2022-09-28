@@ -248,10 +248,16 @@ class Merge extends Sort{
 	 * @param end Final position in the array to be sorted
 	 */
 	apply(a, start=0, end=-1, order=null) {
-        if(order==null) order = this.order
-        if(end=-1) end = a.length
-		this.insertion = new Insertion(order)
-		this.rec_apply( a, order );
+        	if(order==null) order = this.order
+        	if(end=-1) end = a.length
+        	var i=start
+        	while(i<end-1 && order(a[i],a[i+1])<=0 ) i++
+        	if(i<end-1){
+            		var ca = this.copy(a, start, end-start)
+		    	this.insertion = new Insertion(order)
+		    	this.rec_apply( ca, order );
+            		for( var i=start; i<end; i++ ) a[start+i] = ca[i]
+        	}    
 	}
     
 	/**
