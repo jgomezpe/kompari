@@ -66,6 +66,9 @@ public class KompariDemo {
 		SortedSearch<Integer> search = new SortedSearch<Integer>(x,order); 
 		for( int i=0; i<x.length; i++ )
 			System.out.println(x[i] + ":" + search.find(x[i]));
+		System.out.println("-10:" + search.find(-10));
+		System.out.println("17:" + search.find(17));
+		System.out.println("20:" + search.find(20));
 	} 
     
 	public static void main( String[] args ) {

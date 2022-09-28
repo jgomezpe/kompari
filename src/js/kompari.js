@@ -123,3 +123,179 @@ class SortedSearch {
         }else return start
     } 
 }
+
+/**
+ * <p>Abstract Sorting algorithm for Arrays of objects</p>
+ */
+ class Sort{
+	/**
+	 * Crates a sorting algorithm with the given order
+	 * @param order Order used for sorting the objects
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 */
+	constructor(order, start=0, end=-1){ 
+		this.order = order
+		this.start = start
+		this.end = end
+	}
+
+	/**
+	 * Sets the sorting limits
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 */
+	setLimits(start, end) {
+		this.start = start
+		this.end = end
+	}
+
+	/**
+	 * Sorts the array of objects according to the given order (it does not creates a new array)
+	 * @param a Array of objects to be sorted
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 * @param order Order used for sorting the objects
+	 */
+	apply(a, start=0, end=-1, order=null){ return a }
+}
+
+/**
+ * <p>Insertion sort algorithm</p>
+ */
+ class Insertion extends Sort{
+	/**
+	 * Crates a sorting algorithm with the given order
+	 * @param order Order used for sorting the objects
+	 */
+	constructor(order, start=0, end=-1){ super(order, start, end ) }
+
+	/**
+	 * Sorts a vector of objects using Insertion sort
+	 * @param a array to be sorted
+	 */
+	apply(a, start=0, end=-1, order=null) {
+        if(order == null) order = this.order
+        if(end=-1) end = a.length
+		for (var i = start+1; i < end; i++) {
+			var y
+			var x = a[i]
+			var j = i - 1
+			while(j >= start && order(x, y=a[j])<0 ) {
+				a[j+1] = y
+				j--
+			}
+			a[j+1] = x
+		}
+	}
+}
+
+/**
+ * <p>Bubble sort algorithm</p>
+ */
+class Bubble extends Sort{
+	/**
+	 * Crates a sorting algorithm with the given order
+	 * @param order Order used for sorting the objects
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 */
+	constructor(order, start=0, end=-1){ super(order, start, end ) }
+
+	/**
+	 * Sorts a portion of the array of objects according to the given order (it does not creates a new array)
+	 * @param a Array of objects to be sorted
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 */
+	apply( a, start=0, end=-1, order=null) {
+        if(order == null) order = this.order
+        if(end=-1) end = a.length
+		for(var i = start; i < end - 1; i++){
+			var x = a[i]
+			for(var j = i + 1; j < end; j++) {
+				var y = a[j]
+				if(order(y, x)<0) {
+					a[i] = y
+					a[j] = x
+					x = y
+				}
+			}	
+		}
+	}
+}
+
+/**
+ * <p>Merge Sort algorithm</p>
+ */
+class Merge extends Sort{
+	/**
+	 * Crates a sorting algorithm with the given order
+	 * @param order Order used for sorting the objects
+	 */
+	constructor(order, start=0, end=-1){ super(order, start, end ) }
+    
+	copy( a, start, n ) {
+		var x = []
+        for(var i=0; i<n; i++) x[i] = a[start+i]
+		return x
+	}
+
+	/**
+	 * Sorts a portion of the array of objects according to the given order (it does not creates a new array)
+	 * @param a Array of objects to be sorted
+	 * @param start Initial position in the array to be sorted
+	 * @param end Final position in the array to be sorted
+	 */
+	apply(a, start=0, end=-1, order=null) {
+        if(order==null) order = this.order
+        if(end=-1) end = a.length
+		this.insertion = new Insertion(order)
+		this.rec_apply( a, order );
+	}
+    
+	/**
+	 * Recursive merge sort method
+	 * @param a Array to be sorted
+	 */
+	rec_apply(a, order) {
+		var n = a.length
+		if (n > 7) {
+			var nLeft = Math.floor(n / 2)
+			var nRight = n - nLeft
+			var aLeft = this.copy(a, 0, nLeft)
+			var aRight = this.copy(a, nLeft, nRight)
+
+            this.rec_apply(aLeft, order)
+			this.rec_apply(aRight, order)
+
+			var k = 0
+			var left = 0
+			var right = 0
+          
+			var x = aLeft[left]
+			var y = aRight[right]
+			while (left < nLeft && right < nRight) {
+				if(order(x, y) < 0) {
+					a[k] = x
+					left++
+					if( left<nLeft ) x = aLeft[left]
+				} else {
+					a[k] = y
+					right++
+					if( right<nRight ) y = aRight[right]
+				}
+				k++
+			} 
+			while (left < nLeft) {
+				a[k] = aLeft[left]
+				left++
+				k++
+			} while (right < nRight) {
+				a[k] = aRight[right]
+				right++
+				k++
+			}
+		} else this.insertion.apply(a)
+	}    
+}
