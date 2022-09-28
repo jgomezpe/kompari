@@ -1,5 +1,5 @@
 # kompari
-Comparison/order methods for the numtseng infrastructure.
+Comparison/order methods.
 
 &nbsp;Source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
 
@@ -15,15 +15,15 @@ Comparison/order methods for the numtseng infrastructure.
 
 &nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/kompari.jar">https://github.com/jgomezpe/libs/kompari.jar</A>
 
-&nbsp;API documentation: <A HREF="https://numtseng.com/api/kompari/java/">https://numtseng.com/api/kompari/java/</A>
+&nbsp;Demo class: <A HREF="https:/github.com/jgomezpe/kompari/demo/java/KompariDemo.java">https:/github.com/jgomezpe/kompari/demo/java/KompariDemo.java</A>
 
 &nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
 <h3>JavaScript</h3>
 
-&nbsp;Ready to use: <A HREF="https://numtseng.com/modules/kompari.js">https://numtseng.com/modules/kompari.js</A>
+&nbsp;Ready to use: <A HREF="https://jgomezpe.github.io/kompari/src/js/kompari.js">https://jgomezpe.github.io/kompari/src/js/kompari.js</A>
 
-&nbsp;API documentation: <A HREF="https://numtseng.com/api/kompari/js/">https://numtseng.com/api/kompari/js/</A>
+&nbsp;Demo code: <A HREF="https://jgomezpe.github.io/kompari/demo/js/">https://jgomezpe.github.io/kompari/demo/js/</A>
 
 <h3>License</h3>
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
