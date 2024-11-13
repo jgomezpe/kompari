@@ -18,7 +18,7 @@ Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subc
 
 &nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A> kompari.jar
 
-&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/demo/java/KompariDemo.java">https://jgomezpe.github.io/kompari/java/demo/KompariDemo.java</A>
+&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/java/demo/KompariDemo.java">https://jgomezpe.github.io/kompari/java/demo/KompariDemo.java</A>
 
 &nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
