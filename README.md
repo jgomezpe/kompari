@@ -1,5 +1,5 @@
 # kompari
-Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subclasses of the Sort class), a searching elements mechanism over sorted arrays, comparison (low to high, high to low) methods as functions to sort in any of these orders. Written in JavaScript (and Java).
+Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subclasses of the Sort class), a searching elements mechanism over sorted arrays, comparison (low to high, high to low) methods as functions to sort in any of these orders. Written in JavaScript.
 
 &nbsp;Ready to use: <A HREF="https://jgomezpe.github.io/kompari/src/kompari.js">https://jgomezpe.github.io/kompari/src/kompari.js</A>
 
@@ -13,14 +13,6 @@ Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subc
 &nbsp;E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A>
 
 &nbsp;All rights reserved.
-
-<h3>Java</h3>
-
-&nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A> kompari.jar
-
-&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/java/demo/KompariDemo.java">https://jgomezpe.github.io/kompari/java/demo/KompariDemo.java</A>
-
-&nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
 
 <h3>License</h3>
