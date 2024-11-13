@@ -1,9 +1,12 @@
 # kompari
-Comparison/order methods: Merge Sort, Bubble sort, and Insertion sort (as subclasses of the Sort class), a searching elements mechanism over sorted arrays, comparison (low to high, high to low) methods as functions to sort in any of these orders. Written in Java and JavaScript.
+Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subclasses of the Sort class), a searching elements mechanism over sorted arrays, comparison (low to high, high to low) methods as functions to sort in any of these orders. Written in JavaScript (and Java).
 
-&nbsp;Source code: <A HREF="https://github.com/jgomezpe/kompari/">https://github.com/jgomezpe/kompari/</A>
+&nbsp;Ready to use: <A HREF="https://jgomezpe.github.io/kompari/src/kompari.js">https://jgomezpe.github.io/kompari/src/kompari.js</A>
 
-<h3>Version 1.0</h3>
+&nbsp;Demo code: <A HREF="https://jgomezpe.github.io/kompari/demo/js/">https://jgomezpe.github.io/kompari/demo/</A>
+
+
+<h3>Version 1.1</h3>
 <h3>Copyright (c)</h3>
 &nbsp;Author: <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Jonatan Gomez-Perdomo </A>
 
@@ -15,15 +18,10 @@ Comparison/order methods: Merge Sort, Bubble sort, and Insertion sort (as subcla
 
 &nbsp;Ready to use: <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A> kompari.jar
 
-&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/demo/java/KompariDemo.java">https://jgomezpe.github.io/kompari/demo/java/KompariDemo.java</A>
+&nbsp;Demo class: <A HREF="https://jgomezpe.github.com/kompari/demo/java/KompariDemo.java">https://jgomezpe.github.io/kompari/java/demo/KompariDemo.java</A>
 
 &nbsp;Compilation requires speco.jar available  at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
 
-<h3>JavaScript</h3>
-
-&nbsp;Ready to use: <A HREF="https://jgomezpe.github.io/kompari/src/js/kompari.js">https://jgomezpe.github.io/kompari/src/js/kompari.js</A>
-
-&nbsp;Demo code: <A HREF="https://jgomezpe.github.io/kompari/demo/js/">https://jgomezpe.github.io/kompari/demo/js/</A>
 
 <h3>License</h3>
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
