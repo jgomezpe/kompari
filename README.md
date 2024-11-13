@@ -3,7 +3,7 @@ Comparison/sorting methods: Merge Sort, Bubble sort, and Insertion sort (as subc
 
 &nbsp;Ready to use: <A HREF="https://jgomezpe.github.io/kompari/src/kompari.js">https://jgomezpe.github.io/kompari/src/kompari.js</A>
 
-&nbsp;Demo code: <A HREF="https://jgomezpe.github.io/kompari/demo/js/">https://jgomezpe.github.io/kompari/demo/</A>
+&nbsp;Demo code: <A HREF="https://jgomezpe.github.io/kompari/demo/">https://jgomezpe.github.io/kompari/demo/</A>
 
 
 <h3>Version 1.1</h3>
